@@ -45,7 +45,6 @@ private extension Bot {
                    let text = message.text,
                    text.isEmpty == false {
 
-                    print(text)
                     self.api.sendMessage(chatId: message.chat.id,
                                          text: self.khaleesificator.khaleesificate(text: text),
                                          completion: { _ in })
