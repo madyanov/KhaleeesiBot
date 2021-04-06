@@ -14,11 +14,7 @@
     ```sh
     $ make release
     ```
-2. Пйописывяем в конфиге токен:
+3. Зяпюскяем, юкязывяя токен в пейеменной окйюзения `KHALEEESI_TOKEN` (обйятите внимяние ня 3 E в нязвянии пейеменной):
     ```sh
-    $ vim .build/release/KhaleeesiBot_KhaleeesiBot.bundle/config.json
-    ```
-3. Зяпюскяем:
-    ```sh
-    $ ./.build/release/KhaleeesiBot
+    $ env KHALEEESI_TOKEN=<token> ./.build/release/KhaleeesiBot
     ```

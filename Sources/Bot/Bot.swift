@@ -47,6 +47,7 @@ private extension Bot {
 
                     self.api.sendMessage(chatId: message.chat.id,
                                          text: self.khaleesificator.khaleesificate(text: text),
+                                         replyToMessageId: message.messageId,
                                          completion: { _ in })
                 }
             case .failure(let error):

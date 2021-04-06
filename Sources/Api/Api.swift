@@ -27,9 +27,13 @@ public final class Api {
 
     public func sendMessage(chatId: Int,
                             text: String,
+                            replyToMessageId: Int?,
                             completion: @escaping (Result<Empty, Error>) -> Void) {
 
-        let query = SendMessageQuery(chatId: chatId, text: text)
+        let query = SendMessageQuery(chatId: chatId,
+                                     text: text,
+                                     replyToMessageId: replyToMessageId,
+                                     allowSendingWithoutReply: true)
 
         Request<SendMessageQuery, Empty>(url: endpoint(method: "sendMessage"),
                                          httpMethod: .post(query),
